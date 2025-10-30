@@ -4,6 +4,9 @@
 .zima-faq {
   @include utils.blockWrapper;
   margin-bottom: 17.5rem;
+  @include media.breakpoint(mobile) {
+    margin-bottom: 13.4rem;
+  }
 }
 
 .zima-faq__content {
@@ -25,6 +28,9 @@
   z-index: -1;
   margin-top: -23.7rem;
   margin-right: -9rem;
+  @include media.breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .zima-faq__heading {
@@ -33,12 +39,24 @@
   font-weight: 800;
   line-height: 110%;
   margin-bottom: 4rem;
+  @include media.breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-wrap: balance;
+  }
 }
 
 .zima-faq__list {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  @include media.breakpoint(mobile) {
+    gap: 1.5rem;
+  }
 }
 
 .zima-faq__accordion {
@@ -75,6 +93,20 @@
       transform: rotate(90deg);
     }
   }
+
+  @include media.breakpoint(mobile) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    gap: 0.9rem;
+
+    svg {
+      width: 0.6445rem;
+      height: 0.725rem;
+      margin-top: 0.9rem;
+    }
+  }
 }
 
 .zima-faq__accordion-btn-text {
@@ -103,6 +135,15 @@
   line-height: 120%;
   padding: 2rem;
   padding-top: 1rem;
+
+  @include media.breakpoint(mobile) {
+    padding: 2rem;
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
 }
 
 .zima-faq__snowflake-two {
@@ -115,4 +156,7 @@
   max-width: none;
   z-index: -1;
   top: 20.5rem;
+  @include media.breakpoint(mobile) {
+    display: none;
+  }
 }

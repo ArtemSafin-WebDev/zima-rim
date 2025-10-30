@@ -4,6 +4,10 @@
 .zima-about {
   @include utils.blockWrapper;
   margin-bottom: 17.5rem;
+
+  @include media.breakpoint(mobile) {
+    margin-bottom: 13.5rem;
+  }
 }
 
 .zima-about__content {
@@ -12,6 +16,12 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2rem;
   align-items: center;
+  @include media.breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 3rem;
+    align-items: stretch;
+    position: relative;
+  }
 }
 
 .zima-about__image-card {
@@ -19,6 +29,12 @@
   aspect-ratio: 600 / 300;
   overflow: hidden;
   border-radius: 3.5rem;
+
+  @include media.breakpoint(mobile) {
+    border-radius: 2rem;
+    aspect-ratio: 358 / 175;
+    order: 20;
+  }
 }
 
 .zima-about__image {
@@ -34,6 +50,10 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  @include media.breakpoint(mobile) {
+    gap: 1.5rem;
+    text-align: center;
+  }
 }
 
 .zima-about__heading {
@@ -41,6 +61,12 @@
   font-style: normal;
   font-weight: 800;
   line-height: 110%;
+  @include media.breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+  }
 
   b {
     font-weight: inherit;
@@ -54,7 +80,34 @@
   font-weight: 400;
   line-height: 120%;
 
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
   b {
     font-weight: 800;
+  }
+}
+
+.zima-about__x2 {
+  display: none;
+
+  @include media.breakpoint(mobile) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+    height: auto;
+    pointer-events: none;
+    z-index: 4;
+    width: 25.5rem;
+    margin-right: -6.5rem;
+    margin-bottom: -10rem;
+    display: block;
   }
 }

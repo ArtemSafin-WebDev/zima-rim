@@ -6,6 +6,10 @@
   margin-bottom: 17.5rem;
   position: relative;
   z-index: 6;
+
+  @include media.breakpoint(mobile) {
+    margin-bottom: 13.5rem;
+  }
 }
 
 .zima-month__content {
@@ -14,6 +18,10 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2rem;
   position: relative;
+  @include media.breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 3rem;
+  }
 }
 
 .zima-month__x2 {
@@ -27,6 +35,10 @@
   width: 40rem;
   max-width: none;
   pointer-events: none;
+
+  @include media.breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .zima-month__text-card {
@@ -38,6 +50,15 @@
   flex-direction: column;
   gap: 2rem;
   z-index: 3;
+
+  @include media.breakpoint(mobile) {
+    text-align: center;
+    padding: 2rem 3rem;
+    gap: 1.5rem;
+    border-radius: 2rem;
+    background: rgba(8, 18, 44, 0.05);
+    backdrop-filter: blur(1.4917rem);
+  }
 }
 
 .zima-month__text-card-title {
@@ -45,6 +66,13 @@
   font-style: normal;
   font-weight: 800;
   line-height: 110%;
+  @include media.breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    text-wrap: balance;
+  }
 }
 
 .zima-month__text-card-text {
@@ -53,6 +81,13 @@
   font-weight: 400;
   line-height: 120%;
   max-width: 45rem;
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
 }
 
 .zima-month__text-card-link {
@@ -65,14 +100,25 @@
   line-height: 110%;
   padding: 1.2rem 6rem;
   color: white;
-  background-color: var(--zima-orange);
+
   transition: background-color 0.2s, box-shadow 0.2s;
   margin-top: auto;
   border-radius: 50rem;
-
+  background-color: #ff5129;
   &:link,
   &:visited {
     color: white;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    padding: 1rem 5.5rem;
+    margin-top: 1.5rem;
+    align-self: center;
+    background-color: #fc3f1d;
   }
 }
 
@@ -80,10 +126,17 @@
   position: relative;
   overflow: hidden;
   border-radius: 3.5rem;
+
+  @include media.breakpoint(mobile) {
+    border-radius: 2rem;
+  }
   &::before {
     content: "";
     display: block;
     padding-bottom: 63.7%;
+    @include media.breakpoint(mobile) {
+      padding-bottom: 48.8%;
+    }
   }
 }
 
@@ -107,4 +160,13 @@
   max-width: none;
   height: auto;
   pointer-events: none;
+
+  @include media.breakpoint(mobile) {
+    width: 25rem;
+    left: 1.3rem;
+    transform: none;
+    bottom: -5rem;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 }

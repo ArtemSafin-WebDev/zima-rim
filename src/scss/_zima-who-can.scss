@@ -4,6 +4,10 @@
 .zima-who-can {
   @include utils.blockWrapper;
   margin-bottom: 17.5rem;
+
+  @include media.breakpoint(mobile) {
+    margin-bottom: 13.5rem;
+  }
 }
 
 .zima-who-can__content {
@@ -17,6 +21,14 @@
   font-style: normal;
   font-weight: 800;
   line-height: 110%;
+
+  @include media.breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    text-align: center;
+  }
 }
 
 .zima-who-can__heading-text {
@@ -28,6 +40,15 @@
 
   b {
     font-weight: 800;
+  }
+  @include media.breakpoint(mobile) {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-align: center;
+    text-wrap: balance;
   }
 }
 
@@ -42,6 +63,11 @@
   aspect-ratio: 1200 / 300;
   border-radius: 3.5rem;
   overflow: hidden;
+
+  @include media.breakpoint(mobile) {
+    border-radius: 2rem;
+    aspect-ratio: 358 / 175;
+  }
 }
 
 .zima-who-can__card-image {
@@ -65,4 +91,9 @@
   width: 26rem;
   height: auto;
   max-width: none;
+  @include media.breakpoint(mobile) {
+    width: 12rem;
+    margin-right: -2rem;
+    margin-bottom: -6rem;
+  }
 }
