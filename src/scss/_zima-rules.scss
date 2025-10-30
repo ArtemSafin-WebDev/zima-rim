@@ -1,0 +1,124 @@
+@use "media";
+@use "utils";
+
+.zima-rules {
+  @include utils.blockWrapper;
+  margin-bottom: 17.5rem;
+}
+
+.zima-rules__content {
+  @include utils.blockContent;
+}
+
+.zima-rules__heading {
+  font-size: 5.2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+  margin-bottom: 6rem;
+  position: relative;
+  z-index: 2;
+
+  b {
+    color: var(--zima-orange);
+  }
+}
+
+.zima-rules__wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.zima-rules__x2-one {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  pointer-events: none;
+  z-index: -1;
+  max-width: none;
+  height: auto;
+  width: 51rem;
+  margin-bottom: -18rem;
+  margin-left: -18rem;
+}
+
+.zima-rules__list {
+  display: grid;
+  grid-template-columns: repeat(18, minmax(0, 1fr));
+  grid-gap: 2rem;
+}
+
+.zima-rules__list-item {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(1) {
+    grid-column: span 7;
+  }
+  &:nth-child(2) {
+    grid-column: span 11;
+  }
+  &:nth-child(3) {
+    grid-column: span 10;
+  }
+  &:nth-child(4) {
+    grid-column: span 8;
+  }
+}
+
+.zima-rules__card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: rgba(8, 18, 44, 0.05);
+  backdrop-filter: blur(2.5rem);
+  gap: 1rem;
+
+  &--orange {
+    background: #ff5129;
+    backdrop-filter: none;
+    color: white;
+  }
+
+  &--purple {
+    background: #5229a1;
+    backdrop-filter: none;
+    color: white;
+
+    .zima-rules__card-text {
+      padding-right: 30rem;
+    }
+  }
+}
+
+.zima-rules__card-title {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+}
+
+.zima-rules__card-text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  padding-right: 15rem;
+}
+
+.zima-rules__x2-two {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-right: 2rem;
+  height: auto;
+  max-width: none;
+  z-index: 4;
+  pointer-events: none;
+  width: 32rem;
+  margin-top: -14rem;
+  pointer-events: none;
+}

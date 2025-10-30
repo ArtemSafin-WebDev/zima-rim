@@ -1,0 +1,99 @@
+@use "media";
+@use "utils";
+
+.zima-contact {
+  @include utils.blockWrapper;
+  margin-bottom: 17.5rem;
+}
+
+.zima-contact__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.7rem;
+}
+
+.zima-contact__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.zima-contact__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.zima-contact__heading {
+  font-size: 5.2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+  text-wrap: balance;
+}
+
+.zima-contact__text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.zima-contact__phone {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+  padding: 1rem 4rem;
+  border-radius: 50rem;
+  background: var(--zima-orange);
+  color: white;
+  align-self: flex-start;
+  display: block;
+  text-align: center;
+  transition: background-color 0.2s, box-shadow 0.2s;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+}
+
+.zima-contact__image-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3.5rem;
+  aspect-ratio: 580 / 370;
+}
+
+.zima-contact__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zima-contact__disclaimer {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-skip-ink: none;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--zima-orange);
+      }
+    }
+  }
+}

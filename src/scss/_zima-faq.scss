@@ -1,0 +1,118 @@
+@use "media";
+@use "utils";
+
+.zima-faq {
+  @include utils.blockWrapper;
+  margin-bottom: 17.5rem;
+}
+
+.zima-faq__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.zima-faq__snowflake-one {
+  position: absolute;
+  pointer-events: none;
+  max-width: none;
+  height: auto;
+  right: 100%;
+  top: 100%;
+  width: 52rem;
+  z-index: -1;
+  margin-top: -23.7rem;
+  margin-right: -9rem;
+}
+
+.zima-faq__heading {
+  font-size: 5.2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+  margin-bottom: 4rem;
+}
+
+.zima-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.zima-faq__accordion {
+  display: block;
+  border-radius: 2rem;
+  background: rgba(228, 228, 228, 0.5);
+}
+
+.zima-faq__accordion-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  width: 100%;
+  text-align: left;
+  padding: 2rem;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    flex-shrink: 0;
+    width: 1.2891rem;
+    height: 1.4499rem;
+    fill: var(--zima-orange);
+    margin-top: 1.2rem;
+    transition: transform 0.2s;
+  }
+
+  .shown & {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.zima-faq__accordion-btn-text {
+  max-width: 72rem;
+}
+
+.zima-faq__accordion-dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+
+  .shown & {
+    grid-template-rows: 1fr;
+  }
+}
+
+.zima-faq__accordion-dropdown-inner {
+  grid-row: 1 / 2;
+  overflow: hidden;
+}
+
+.zima-faq__accordion-text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  padding: 2rem;
+  padding-top: 1rem;
+}
+
+.zima-faq__snowflake-two {
+  pointer-events: none;
+  position: absolute;
+  left: 100%;
+  margin-left: 14.5rem;
+  width: 15.2rem;
+  height: auto;
+  max-width: none;
+  z-index: -1;
+  top: 20.5rem;
+}

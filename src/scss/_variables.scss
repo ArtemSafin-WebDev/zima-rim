@@ -1,0 +1,14 @@
+@use "media";
+
+:root {
+  --zima-orange: #ff5129;
+  --zima-text-color: #08122c;
+  --zima-purple: #5229a1;
+  --uni: "Uni Neue", sans-serif;
+  --content-padding: 4rem;
+  --container-width: 120rem;
+
+  @include media.breakpoint(mobile) {
+    --content-padding: 1.5rem;
+  }
+}

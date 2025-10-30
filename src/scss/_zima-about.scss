@@ -1,0 +1,60 @@
+@use "media";
+@use "utils";
+
+.zima-about {
+  @include utils.blockWrapper;
+  margin-bottom: 17.5rem;
+}
+
+.zima-about__content {
+  @include utils.blockContent;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.zima-about__image-card {
+  position: relative;
+  aspect-ratio: 600 / 300;
+  overflow: hidden;
+  border-radius: 3.5rem;
+}
+
+.zima-about__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zima-about__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.zima-about__heading {
+  font-size: 5.2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+
+  b {
+    font-weight: inherit;
+    color: var(--zima-orange);
+  }
+}
+
+.zima-about__text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+
+  b {
+    font-weight: 800;
+  }
+}
